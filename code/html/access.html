@@ -1,0 +1,305 @@
+		<!-- NAVBAR
+		================================================== -->
+		<!-- Wrap the .navbar in .container to center it on the page and provide easy way to target it with .navbar-wrapper. -->
+		<div class="container navbar-wrapper">
+
+			<div class="navbar navbar-inverse">
+				<div class="navbar-inner">
+					<!-- Responsive Navbar Part 1: Button for triggering responsive navbar (not covered in tutorial). Include responsive CSS to utilize. -->
+					<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</a>
+					<a class="brand" href="#">Simple Online OS</a>
+					<!-- Responsive Navbar Part 2: Place all navbar contents you want collapsed withing .navbar-collapse.collapse. -->
+					<div class="nav-collapse collapse">
+						<ul class="nav">
+							<li class="active">
+								<a class="ml" href="#" ml-label="home">Home</a>
+							</li>
+							<li>
+								<a class="ml" href="#about" ml-label="about">About</a>
+							</li>
+							<li>
+								<a class="ml" href="#contact" ml-label="contact">Contact</a>
+							</li>
+						</ul>
+						<ul class="nav pull-right">
+							<li class="dropdown">
+								<a href="" class="dropdown-toggle" data-toggle="dropdown"><div class="pull-left ml" ml-label="sign-in">Sign in</div>&nbsp;<b class="caret"></b></a>
+								<!-- TODO. Sacar las propiedades style en un css -->
+								<div class="dropdown-menu" role="menu" style="padding: 15px; padding-bottom: 0px;">
+									<form id="form_login">
+										<fieldset>
+											<div class="controls">
+												<input id="input_text_email" class="ml-placeholder" name="email" type="email" ml-label="email" placeholder="email" required>
+											</div>
+											<div class="controls">
+												<input id="input_text_password" class="ml-placeholder" name="password" type="password" ml-label="password" placeholder="password" required>
+											</div>
+											<div class="control">
+												<label class="checkbox">
+													<input id="input_checkbox_remember" name="remember" type="checkbox"> <div class="ml" ml-label="remember">Remember me</div>
+												</label>
+											</div>
+										</fieldset>
+										<div class="controls">
+											<button id="btn_login" type="submit" class="btn btn-primary ml" ml-label="sign-in">Log in</button>
+											<button id="btn_register" type="button" class="btn ml" data-toggle="modal" data-target="#div_modal_register" ml-label="register">Register</button>
+										</div>
+										<a href="" data-toggle="modal" data-target="#div_modal_forgot_password"><small class="ml" ml-label="forgot-password">Forgot your password?</small></a>
+									</form>
+									<div id="div_alert_error_login" class="alert alert-error hide">
+										Log in failed.
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div><!--/.nav-collapse -->
+				</div><!-- /.navbar-inner -->
+			</div><!-- /.navbar -->
+		</div><!-- /.container -->
+
+		<!-- REGISTER MODAL -->
+		<div id="div_modal_register" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				<h3 id="myModalLabel" class="ml" ml-label="register-form">Register form</h3>
+			</div>
+			<form id="form_register" class="form-horizontal">
+				<div class="modal-body">
+					<p class="ml" ml-label="fill-form">
+						Please, fill the following form:
+					</p>
+					<fieldset>
+						<div class="control-group">
+							<label class="control-label ml" for="input_email_reg" ml-label="email">Email</label>
+							<div class="controls">
+								<input id="input_email_reg" class="ml-placeholder" name="email" type="email" ml-label="email" placeholder="email" required>
+							</div>
+						</div>
+						<div class="control-group">
+							<label class="control-label ml" for="input_text_password_reg" ml-label="password">Password</label>
+							<div class="controls">
+								<input id="input_text_password_reg" class="ml-placeholder" name="password" type="password" ml-label="password" placeholder="password" required>
+							</div>
+						</div>
+						<div class="control-group">
+							<label class="control-label ml" for="inputPassword" ml-label="confirm-password">Confirm password</label>
+							<div class="controls">
+								<input id="input_text_confirm_password_reg" class="ml-placeholder" name="confirm_password" type="password" ml-label="password" placeholder="password" required>
+							</div>
+						</div>
+					</fieldset>
+					<p>
+						<small class="ml" ml-label="register-agreement-1">By clicking "Register", you agree to our </small><a data-toggle="modal" data-target="#div_modal_terms"><small class="ml" ml-label="terms">Terms</small></a><small class="ml" ml-label="register-agreement-2"> and that you have read our </small><a data-toggle="modal" data-target="#div_modal_privacy"><small class="ml" ml-label="privacy">Privacy</small></a><small class="ml" ml-label="register-agreement-3">and</small><a data-toggle="modal" data-target="#div_modal_cookies"><small class="ml" ml-label="cookies">Cookies</small></a><small class="ml" ml-label="register-agreement-4"> use.</small>
+					</p>
+				</div>
+				<div class="modal-footer">
+					<button class="btn ml" ml-label="close" data-dismiss="modal" aria-hidden="true">Close</button>
+					<button class="btn btn-primary ml" type="submit" ml-label="register">Register</button>
+					<p>
+						<div id="div_alert_error_register" class="alert alert-error hide">
+							Register failed.
+						</div>
+					</p>
+				</div>
+			</form>
+		</div>
+		
+		<!-- FORGOT PASSWORD MODAL -->
+		<div id="div_modal_forgot_password" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				<h3 id="myModalLabel" class="ml" ml-label="password-recovery">Password recovery</h3>
+			</div>
+			<form id="form_recover_password" class="form-horizontal">
+				<div id="div_modal_verify_body" class="modal-body">
+					<p class="ml" ml-label="fill-form">
+						Please, fill the following form:
+					</p>
+					<fieldset>
+						<div class="control-group">
+							<label class="control-label" for="inputEmail">Email:</label>
+							<div class="controls">
+								<input id="input_email_reg" name="email" type="email" placeholder="email" required>
+							</div>
+						</div>
+					</fieldset>
+				</div>
+				<div class="modal-footer">
+					<button class="btn ml" ml-label="close" data-dismiss="modal" aria-hidden="true">Close</button>
+					<button class="btn btn-primary ml" type="submit" ml-label="password-recovery">Recover password</button>
+					<p>
+						<div id="div_alert_error_register" class="alert alert-error hide">
+							Password recovery failed.
+						</div>
+					</p>
+				</div>
+			</form>
+		</div>
+		
+		<!-- PRIVACY MODAL -->
+		<div id="div_modal_privacy" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				<h3 id="myModalLabel" class="ml" ml-label="privacy">Privacy</h3>
+			</div>
+			<div id="div_modal_verify_body" class="modal-body">
+			</div>
+			<div class="modal-footer">
+				<button class="btn ml" ml-label="close" data-dismiss="modal" aria-hidden="true">Close</button>
+			</div>
+		</div>
+		
+		<!-- COOKIES MODAL -->
+		<div id="div_modal_cookies" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				<h3 id="myModalLabel" class="ml" ml-label="cookies">Cookies</h3>
+			</div>
+			<div id="div_modal_verify_body" class="modal-body">
+			</div>
+			<div class="modal-footer">
+				<button class="btn ml" ml-label="close" data-dismiss="modal" aria-hidden="true">Close</button>
+			</div>
+		</div>
+		
+		<!-- TERMS MODAL -->
+		<div id="div_modal_terms" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				<h3 id="myModalLabel" class="ml" ml-label="terms">Terms</h3>
+			</div>
+			<div id="div_modal_verify_body" class="modal-body">
+			</div>
+			<div class="modal-footer">
+				<button class="btn ml" ml-label="close" data-dismiss="modal" aria-hidden="true">Close</button>
+			</div>
+		</div>
+		
+		<!-- VERIFY MODAL -->
+		<div id="div_modal_verify" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				<h3 id="myModalLabel">Account verification</h3>
+			</div>
+			<div id="div_modal_verify_body" class="modal-body">
+			</div>
+			<div class="modal-footer">
+				<button class="btn ml" ml-label="close" data-dismiss="modal" aria-hidden="true">Close</button>
+			</div>
+		</div>
+
+		<!-- Carousel
+		================================================== -->
+		<div id="myCarousel" class="carousel slide">
+			<div class="carousel-inner">
+				<div class="item active">
+					<img src="img/slide-01.jpg" alt="">
+					<div class="container">
+						<div class="carousel-caption">
+							<h1>Example headline.</h1>
+							<p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+							<a class="btn btn-large btn-primary" href="#">Sign up today</a>
+						</div>
+					</div>
+				</div>
+				<div class="item">
+					<img src="../assets/img/examples/slide-02.png" alt="">
+					<div class="container">
+						<div class="carousel-caption">
+							<h1>Another example headline.</h1>
+							<p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+							<a class="btn btn-large btn-primary" href="#">Learn more</a>
+						</div>
+					</div>
+				</div>
+				<div class="item">
+					<img src="../assets/img/examples/slide-03.png" alt="">
+					<div class="container">
+						<div class="carousel-caption">
+							<h1>One more for good measure.</h1>
+							<p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+							<a class="btn btn-large btn-primary" href="#">Browse gallery</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<a class="left carousel-control" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+			<a class="right carousel-control" href="#myCarousel" data-slide="next">&rsaquo;</a>
+		</div><!-- /.carousel -->
+
+
+
+		<!-- Marketing messaging and featurettes
+		================================================== -->
+		<!-- Wrap the rest of the page in another container to center all the content. -->
+
+		<div class="container marketing">
+
+			<!-- Three columns of text below the carousel -->
+			<!--<div class="row">
+				<div class="span4">
+					<img class="img-circle" src="http://placehold.it/140x140">
+					<h2>Heading</h2>
+					<p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p>
+					<p><a class="btn" href="#">View details &raquo;</a></p>
+				</div>
+				<div class="span4">
+					<img class="img-circle" src="http://placehold.it/140x140">
+					<h2>Heading</h2>
+					<p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+					<p><a class="btn" href="#">View details &raquo;</a></p>
+				</div>
+				<div class="span4">
+					<img class="img-circle" src="http://placehold.it/140x140">
+					<h2>Heading</h2>
+					<p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+					<p><a class="btn" href="#">View details &raquo;</a></p>
+				</div>
+			</div>-->
+
+
+			<!-- START THE FEATURETTES -->
+
+			<!--<hr class="featurette-divider">
+
+			<div class="featurette">
+				<img class="featurette-image pull-right" src="../assets/img/examples/browser-icon-chrome.png">
+				<h2 class="featurette-heading">First featurette headling. <span class="muted">It'll blow your mind.</span></h2>
+				<p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+			</div>
+
+			<hr class="featurette-divider">
+
+			<div class="featurette">
+				<img class="featurette-image pull-left" src="../assets/img/examples/browser-icon-firefox.png">
+				<h2 class="featurette-heading">Oh yeah, it's that good. <span class="muted">See for yourself.</span></h2>
+				<p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+			</div>
+
+			<hr class="featurette-divider">
+
+			<div class="featurette">
+				<img class="featurette-image pull-right" src="../assets/img/examples/browser-icon-safari.png">
+				<h2 class="featurette-heading">And lastly, this one. <span class="muted">Checkmate.</span></h2>
+				<p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+			</div>
+
+			<hr class="featurette-divider">-->
+
+			<!-- /END THE FEATURETTES -->
+
+			<!-- FOOTER -->
+			<footer>
+				<p class="pull-right">
+					<a class="ml" href="#" ml-label="to-top">Back to top</a>
+				</p>
+				<p>
+					&copy; 2012 Company, Inc. &middot; <a class="ml" href="" data-toggle="modal" data-target="#div_modal_privacy" ml-label="privacy">Privacy</a> &middot; <a class="ml" href="" data-toggle="modal" data-target="#div_modal_cookies" ml-label="cookies">Cookies</a> &middot; <a class="ml" href="" data-toggle="modal" data-target="#div_modal_terms" ml-label="terms">Terms</a>
+				</p>
+			</footer>
+
+		</div>

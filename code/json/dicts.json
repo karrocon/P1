@@ -1,0 +1,101 @@
+{
+	"es": 
+		{
+			"home": "Inicio",
+			"about": "¿Quiénes somos?",
+			"contact": "Contacto",
+			"help": "Ayuda",
+			
+			"accept": "Aceptar",
+			"decline": "Rechazar",
+			"cancel": "Cancelar",
+			"close": "Cerrar",
+			"open": "Abrir",
+			"go": "Ir",
+			"back": "Atrás",
+			"forward": "Adelante",
+			
+			"email": "Email",
+			"password": "Contraseña",
+			"remember": "No cerrar sesión",
+			
+			"sign-in": "Entrar",
+			"register": "Registrarse",
+			"forgot-password": "¿Olvidó su contraseña?",
+			
+			"welcome": "Hola",
+			"preferences": "Preferencias",
+			"log-out": "Cerrar sesión",
+			
+			"search": "Buscar",
+			
+			"suggestions": "Sugerencias",
+			
+			"register-form": "Formulario de registro",
+			"confirm-password": "Confirmar contraseña",
+			"register-agreement-1": "Al hacer clic en 'Registrarse', aceptas nuestras ",
+			"register-agreement-2": " y afirmas haber leído nuestro uso de ",
+			"register-agreement-3": " y de ",
+			"register-agreement-4": ".",
+			
+			"password-recovery": "Recuperar contraseña",
+			
+			"fill-form": "Por favor, rellene el siguiente formulario:",
+			
+			"to-top": "Volver arriba",
+			
+			"privacy": "Privacidad",
+			"cookies": "Cookies",
+			"terms": "Condiciones"
+		}
+	,
+	"en": 
+		{
+			"home": "Home",
+			"about": "About",
+			"contact": "Contact",
+			"help": "Help",
+			
+			"accept": "Accept",
+			"decline": "Decline",
+			"cancel": "Cancel",
+			"close": "Close",
+			"open": "Open",
+			"go": "Go",
+			"back": "Back",
+			"forward": "Forward",
+			
+			"email": "Email",
+			"password": "Password",
+			"remember": "Keep me logged in",
+			
+			"sign-in": "Sign in",
+			"register": "Register",
+			"forgot-password": "Forgot your password?",
+			
+			"welcome": "Welcome",
+			"preferences": "Preferences",
+			"log-out": "Log out",
+			
+			"search": "Search",
+			
+			"suggestions": "Suggestions",
+			
+			"register-form": "Register form",
+			"confirm-password": "Confirm password",
+			"register-agreement-1": "By clicking 'Register', you agree to our ",
+			"register-agreement-2": " and that you have read our ",
+			"register-agreement-3": " and ",
+			"register-agreement-4": " use.",
+			
+			"password-recovery": "Recover password",
+			
+			"fill-form": "Please, fill the following form:",
+			
+			"to-top": "Back to top",
+			
+			"privacy": "Privacy",
+			"cookies": "Cookies",
+			"terms": "Terms"
+		}
+}
